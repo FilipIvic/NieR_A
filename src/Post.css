@@ -65,3 +65,13 @@
     font-size: 14px;
     padding-left: 7px;
   }
+
+@media screen and (min-width:300px) and (max-width: 879px){
+    .post{
+        z-index:2;
+        background-color: white;
+        width:300px;
+        border: 1px solid lightgray;
+        margin-bottom: 45px;
+    }
+}

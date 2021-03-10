@@ -13,9 +13,6 @@
 }
 
 .app__header{
-  position: sticky;
-  top:0;
-  z-index: 3;
   background-color:white;
   padding: 1rem;
   border-bottom: 1px solid lightgray;
@@ -30,12 +27,20 @@
 }
 
 .app__posts{
-  z-index: 2;
+  object-fit:contain; /*keeps aspect ratio*/
   padding: 2rem;
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items: center;
+}
+
+.app__post{
+  object-fit:contain; /*keeps aspect ratio*/
+  padding: 2rem;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
 }
 
 .app__addButton{
@@ -46,4 +51,17 @@
 
 .app__addButton:hover{
   color:  #828487;
+}
+
+@media screen and (min-width:300px) and (max-width: 879px){
+  .app__posts{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .app__signup{
+    align-items: center;
+    width: 100%;
+  }
 }
